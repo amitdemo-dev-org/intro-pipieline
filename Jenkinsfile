@@ -12,10 +12,6 @@ pipeline {
               sh 'java -version'
             }
         }
-    
-        stage('Testing') {
-         
-      }
       }
     
     
@@ -23,7 +19,7 @@ pipeline {
   environment {
     MY_NAME = 'AMIT'
     TEST_USER = credentials('test-user')
-  }
+   }
   parameters {
     string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
   }
@@ -32,6 +28,6 @@ pipeline {
     aborted {
       echo 'Why didn\'t you push my button?'
     }
-  }
   
+  } 
 }
