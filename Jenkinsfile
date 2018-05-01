@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Say Hello') {
             steps {
+              echo "test message"
               echo "Hello ${params.Name}!"
               echo "${TEST_USER_USR}"
               echo "${TEST_USER_PSW}"
